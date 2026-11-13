@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "watersheep-opencode-adaptor"
+version = "0.1.0"
+description = "Local advisory WaterSheep decision adapter"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "Apache-2.0"}
+classifiers = ["License :: OSI Approved :: Apache Software License", "Programming Language :: Python :: 3"]
+dependencies = []
+
+[project.scripts]
+watersheep-opencode-adapter = "watersheep_adaptor:main"
+watersheep-decide = "watersheep_adaptor.decide:main"
+watersheep-install-tool = "watersheep_adaptor.install_tool:main"
+
+[tool.setuptools]
+packages = ["watersheep_adaptor"]
+
+[tool.setuptools.package-data]
+watersheep_adaptor = ["watersheep_decide.ts"]

@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Preserve historical local diagnostics without publishing machine-specific paths.
+reports/*
+!reports/release-candidate-v0.1.0.md
+!reports/release-candidate-v0.1.0.md.sha256
+tests/opencode_smoke.py
